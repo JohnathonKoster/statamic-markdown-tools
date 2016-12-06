@@ -1,5 +1,7 @@
 # Markdown Tools for Statamic
 
+![](md_tools.png)
+
 The Markdown Tools addon is simply a collection of modifiers for the generated markdown output. These can be used to accomplish the following:
 
 * Minify the generated output before it's sent to your visitors;
