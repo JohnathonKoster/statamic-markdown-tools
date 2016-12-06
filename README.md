@@ -110,3 +110,11 @@ Just like when working with LeanPub, this modifier makes use of the [Font Aesome
 If you want a convenient place to test out your styles on the generated output of this modifier, simply fork the following pen CodePen:
 
 [http://codepen.io/JohnathonKoster/pen/mOLrKp](http://codepen.io/JohnathonKoster/pen/mOLrKp)
+
+## Content Minifier Modifier
+
+The Content Minifier modifier simple minifies the generated output before it get's sent to your visitors. This is done by incorporating code from the following repository:
+
+[https://github.com/fitztrev/laravel-html-minify](https://github.com/fitztrev/laravel-html-minify)
+
+It is highly recommended that this modifier is ran *last*.
