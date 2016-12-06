@@ -104,3 +104,9 @@ The following CSS can be used in your themes to style the generated blocks:
 }
 
 ```
+
+Just like when working with LeanPub, this modifier makes use of the [Font Aesome](http://fontawesome.io/) CSS font. Make sure to include it in your theme to get the icons to show up.
+
+If you want a convenient place to test out your styles on the generated output of this modifier, simply fork the following pen CodePen:
+
+[http://codepen.io/JohnathonKoster/pen/mOLrKp](http://codepen.io/JohnathonKoster/pen/mOLrKp)
