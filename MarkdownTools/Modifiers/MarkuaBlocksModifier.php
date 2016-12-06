@@ -257,7 +257,7 @@ class MarkuaBlocksModifier implements ModifierInterface
                 $newContents .= $currentContent;
 
             } else {
-                $newContents .= $currentContent . "\n";
+                $newContents .= $currentContent ;
 
             }
 
