@@ -121,4 +121,47 @@ The Content Minifier modifier simple minifies the generated output before it get
 
 [https://github.com/fitztrev/laravel-html-minify](https://github.com/fitztrev/laravel-html-minify)
 
-It is highly recommended that this modifier is ran *last* (with some execeptions).
+It is highly recommended that this modifier is ran *last* (with some exceptions).
+
+## Replace Content Modifier
+
+The Replace Content modifier is used to replace specific strings within the generated page output for your site. To make it work, make sure to add the `replace-content` item to your `modifiers` configuration like so:
+
+```yaml
+modifiers:
+  - 'markua-blocks'
+  - 'content-minifier'
+  - 'replace-content'
+```
+
+You will notice that in the example it is placed after the `content-minifier` modifier. This is done to prevent the `replace-content` minifier from accidentally breaking closing tags or adding extra new lines.
+
+Now that the modifier has been added, we need to specify some replacements to make. To do this, add a new `replace` configuration item to your addon configuration file:
+
+```yaml
+replace:
+  "OS X": "macOS"
+
+```
+
+The above example would cause the `replace-content` modifier to replace all instances of `OS X` with `macOS` on the generated page. The following example demonstrates how to specify multiple replacemements:
+
+```yaml
+replace:
+  "OS X": "macOS"
+  "replace": "me"
+
+```
+
+A full addon configuration file might look like this when using the `replace-content` modifier:
+
+```yaml
+modifiers:
+  - 'markua-blocks'
+  - 'content-minifier'
+  - 'replace-content'
+replace:
+  "OS X": "macOS"
+  "replace": "me"
+
+```
