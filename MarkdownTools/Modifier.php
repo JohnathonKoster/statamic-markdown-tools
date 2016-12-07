@@ -50,7 +50,13 @@ class Modifier
 
         /** @var ModifierInterface $modifier */
         foreach ($this->modifiers as $modifier) {
-            $lines = $this->convertIntoArray($this->normalizeNewLines($modifier->modify($lines)));
+            $modifiedLines = $modifier->modify($lines);
+
+            if ($modifiedLines == null) {
+                continue;
+            }
+
+            $lines = $this->convertIntoArray($this->normalizeNewLines($modifiedLines));
         }
 
         return implode("\n", $lines);
