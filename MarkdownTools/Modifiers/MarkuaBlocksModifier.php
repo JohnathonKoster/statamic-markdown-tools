@@ -247,7 +247,6 @@ class MarkuaBlocksModifier implements ModifierInterface
 
                 if ($isHeader) {
                     $currentContent = str_replace('<p data-markua-feature', '<p data-markua-style="block-header" data-markua-feature', $currentContent);
-                    // dd($currentContent);
                 }
 
                 if (Str::startsWith($lastLine, '<p>{icon=')) {
