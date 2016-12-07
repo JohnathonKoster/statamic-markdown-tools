@@ -1,3 +1,6 @@
 modifiers:
   - 'markua-blocks'
   - 'content-minifier'
+  - 'replace-content'
+replace:
+  "OS X": "macOS"
