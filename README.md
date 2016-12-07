@@ -20,6 +20,7 @@ The Markdown Tools addon allows you to specify which modifiers should run, and p
 modifiers:
   - 'markua-blocks'
   - 'content-minifier'
+  - 'replace-content'
 ```
 
 It is by modifying the `modifiers` setting value that we can control which modifiers run and in what order. Use the following table to figure out the setting name of the modifiers:
@@ -27,6 +28,7 @@ It is by modifying the `modifiers` setting value that we can control which modif
 | Modifier | Description | Setting Name | Class |
 |---|---|---|---|
 | Content Minifier | Minifies the generated output. | `content-minifier` | `Statamic\Addons\MarkdownTools\Modifiers\ContentMinifierModifier` |
+| Replace Content | Simply replaces certain strings within the generated output. | `replace-content` | `Statamic\Addons\MarkdownTools\Modifiers\ReplaceContentModifier` |
 | Markua Blocks | Converts Markua flavored markdown blocks to HTML that can be styled. | `markua-blocks` | `Statamic\Addons\MarkdownTools\Modifiers\MarkuaBlocksModifier` |
 
 ## Markua Blocks Modifier
@@ -119,4 +121,4 @@ The Content Minifier modifier simple minifies the generated output before it get
 
 [https://github.com/fitztrev/laravel-html-minify](https://github.com/fitztrev/laravel-html-minify)
 
-It is highly recommended that this modifier is ran *last*.
+It is highly recommended that this modifier is ran *last* (with some execeptions).
